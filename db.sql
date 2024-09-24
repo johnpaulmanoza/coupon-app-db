@@ -25,6 +25,7 @@ CREATE TABLE Coupons (
     coupon_code VARCHAR(50) UNIQUE NOT NULL,
     description TEXT,
     max_redemptions INT,
+    redemption_count INT,
     expiration_date DATE,
     created_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     FOREIGN KEY (merchant_id) REFERENCES Users(user_id)
